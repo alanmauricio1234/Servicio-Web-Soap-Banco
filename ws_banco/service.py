@@ -43,7 +43,7 @@ class BancoSoapService(ServiceBase):
     # Método que verifica si la fecha de vencimiento de la tarjeta
     # se encuentra vigente
     @rpc(Unicode(nillable=False,), _returns=Boolean)
-    def consulta_fecha(ctx, n_tarjeta):
+    def verifica_fecha(ctx, n_tarjeta):
         try:
             t=Tarjeta.objects.get(n_tarjeta=n_tarjeta)
             if date.today() < t.f_vencimiento:

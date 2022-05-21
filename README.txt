@@ -9,7 +9,7 @@ Los servicios que expone son los siguientes:
     Simula la verificación del chip de una tarjeta.
 -> verifica_tarjeta_bloqueada: Método para verificar si la tarjeta se encuentra bloqueada.
     Se bloquea debido a que se sobrepasa los intentos el cliente.
--> consulta_fecha: Método que verifica si la fecha de vencimiento de la tarjeta
+-> verifica_fecha: Método que verifica si la fecha de vencimiento de la tarjeta
     se encuentra vigente.
 -> consulta_nip: Método que verifica si el nip es correcto, en caso de que no
     aumenta el número de intentos. Si el número de intentos es mayor a 3
