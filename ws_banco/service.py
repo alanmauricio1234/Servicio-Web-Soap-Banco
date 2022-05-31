@@ -90,8 +90,8 @@ class BancoSoapService(ServiceBase):
             r = 0.0
             t=Tarjeta.objects.get(n_tarjeta=n_tarjeta)
             if pago <= t.limite and pago <= t.saldo:
-                r = t.saldo - pago
                 t.saldo -= pago
+                r = t.saldo
                 t.save()
             return r
         except Tarjeta.DoesNotExist:
